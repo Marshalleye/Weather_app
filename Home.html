@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather app</title>
+   <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <header>
+            <div class="info">
+            <h1 class="info__title">Wether prediction</h1>
+            <!--<button id = "find-me">Show my location</button>
+            <p id = "status"></p>
+            <a id = "map-link" target="_blank"></a>-->
+            </div>
+         </header>
+         
+         <main>
+            <div class="app-wrap">
+               <input type="text" autocomplete="off" class="search-box" placeholder="Choose your city..." />
+                  <div class="vidget__row">
+                     <div class="left-panel panel">
+                        <div class="date">
+                     <p>Date: <span id="datetime"></span></p>
+                        </div>
+                        <div class="city">
+                           Osaka
+                        </div>
+                        <div class="description">
+                           Sunny
+                        </div>
+                        <div class="left__panel__wether">
+                           <div class="left__panel__wether__icon babat">
+                              <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="60">
+                           </div>
+                           <div class="temp">
+                              15<span>°c</span> 
+                           </div>
+                        </div>
+                     </div>
+                     <div class="right-panel panel">
+            <img src="https://s5.postimg.cc/lifnombwz/mumbai1.png" alt="" width="160">
+                     </div>
+            </div>
+            </div>
+         </main>
+      </div>
+   </div>
+   <!--<script type="module" src="/script.js"></script>-->
+   <!--<script src="/script2.js"></script>-->
+   <script type="module" src="/AJAX.js"></script>
+</body>
+</html>
