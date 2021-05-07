@@ -14,14 +14,18 @@ function success(position) {
    Longitude = position.coords.longitude;
    console.log(Latitude);
    console.log(Longitude);
-}
-
-function getResults(query) {
    fetch(`${api.base}weather?lat=${Latitude}&lon=${Longitude}&units=metric&appid=${api.key}`)
    .then(weather => {
       return weather.json();
    }).then(displayResults);
 }
+
+//function getResults(query) {
+//   fetch(`${api.base}weather?lat=${Latitude}&lon=${Longitude}&units=metric&appid=${api.key}`)
+//   .then(weather => {
+//      return weather.json();
+//   }).then(displayResults);
+//}
 
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
@@ -33,19 +37,12 @@ function setQuery(evt) {
 }
 
 
-//function getResults(query) {
-//   if (searchbox.value == null) {
-//      fetch(`${api.base}weather?lat=${Latitude}&lon=${Longitude}&units=metric&appid=${api.key}`)
-//         .then(weather => {
-//            return weather.json();
-//         }).then(displayResults);
-//   } else {
-//      fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
-//      .then(weather => {
-//         return weather.json();
-//      }).then(displayResults);
-//   }
-//}
+function getResults(query) {
+      fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
+      .then(weather => {
+         return weather.json();
+      }).then(displayResults);
+}
 
 function displayResults(weather) {
    console.log(weather);
